@@ -34,7 +34,7 @@ const Index = () => {
     {
       name: "Mirza Rahmat Hakim",
       role: "Co-Founder SatuHikmah | Aktivis Pemuda | Mahasiswa Teknik K3 PPNS",
-      image: "../lovable-uploads/founder1.svg",
+      image: "../lovable-uploads/founder2.svg",
       description: `Berangkat dari pesantren dan pendidikan unggulan di MAN Insan Cendekia Sambas, Mirza tumbuh sebagai pemuda yang aktif, reflektif, dan haus akan perubahan. Saat ini ia menjalani studi di bidang Keselamatan dan Kesehatan Kerja (K3) di Politeknik Perkapalan Negeri Surabaya (PPNS), sambil terus memperluas kiprahnya di berbagai lini kepemimpinan dan gerakan kemahasiswaan nasional.
 
 Mirza pernah memegang amanah strategis sebagai:
@@ -49,7 +49,7 @@ Sebagai Co-Founder SatuHikmah, Mirza membawa semangat kepemudaan, ketangguhan la
     {
       name: "Muhammad Fadhil Al-Faruqhi",
       role: "Co-Founder SatuHikmah | Mahasiswa Teknik Industri ITS",
-      image: "../lovable-uploads/founder2.svg",
+      image: "../lovable-uploads/founder1.svg",
       description: `Fadhil adalah sosok pembelajar yang tumbuh di tengah dinamika kampus dan semangat perubahan. Saat ini menempuh studi di Teknik Industri ITS, ia aktif dalam berbagai aktivitas kemahasiswaan, kebijakan kampus, literasi media, dan kepemimpinan organisasi Islam.
 
 Di tengah kesibukannya sebagai Editor ITS Online, Ketua Masyarakat Studi Islam Ulul Ilmi, dan Direktur Kebijakan Publik BEM ITS, Fadhil tetap konsisten membawa semangat literasi, keadilan sosial, dan spiritualitas dalam setiap ruang yang ia jalani.
