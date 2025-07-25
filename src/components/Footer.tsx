@@ -68,7 +68,7 @@ const Footer = () => {
               <div className="flex items-start space-x-2">
                 <MapPin className="w-4 h-4 mt-0.5 text-secondary" />
                 <span className="text-primary-foreground/80">
-                  Jl. Sukolilo Regency Blok E-46, Sukolilo, Surabaya
+                  Jl. Sukolilo Regency Blok A-46, Sukolilo, Surabaya
                 </span>
               </div>
               <div className="flex items-center space-x-2">

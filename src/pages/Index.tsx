@@ -34,7 +34,7 @@ const Index = () => {
     {
       name: "Mirza Rahmat Hakim",
       role: "Co-Founder SatuHikmah | Aktivis Pemuda | Mahasiswa Teknik K3 PPNS",
-      image: "../lovable-uploads/f2.svg",
+      image: "../lovable-uploads/f1.svg",
       description: `Berangkat dari pesantren dan pendidikan unggulan di MAN Insan Cendekia Sambas, Mirza tumbuh sebagai pemuda yang aktif, reflektif, dan haus akan perubahan. Saat ini ia menjalani studi di bidang Keselamatan dan Kesehatan Kerja (K3) di Politeknik Perkapalan Negeri Surabaya (PPNS), sambil terus memperluas kiprahnya di berbagai lini kepemimpinan dan gerakan kemahasiswaan nasional.
 
 Mirza pernah memegang amanah strategis sebagai:
@@ -49,7 +49,7 @@ Sebagai Co-Founder SatuHikmah, Mirza membawa semangat kepemudaan, ketangguhan la
     {
       name: "Muhammad Fadhil Al-Faruqhi",
       role: "Co-Founder SatuHikmah | Mahasiswa Teknik Industri ITS",
-      image: "../lovable-uploads/f1.svg",
+      image: "../lovable-uploads/f2.svg",
       description: `Fadhil adalah sosok pembelajar yang tumbuh di tengah dinamika kampus dan semangat perubahan. Saat ini menempuh studi di Teknik Industri ITS, ia aktif dalam berbagai aktivitas kemahasiswaan, kebijakan kampus, literasi media, dan kepemimpinan organisasi Islam.
 
 Di tengah kesibukannya sebagai Editor ITS Online, Ketua Masyarakat Studi Islam Ulul Ilmi, dan Direktur Kebijakan Publik BEM ITS, Fadhil tetap konsisten membawa semangat literasi, keadilan sosial, dan spiritualitas dalam setiap ruang yang ia jalani.
@@ -494,12 +494,12 @@ Sebagai advisor SatuHikmah, Eko memberi kontribusi pada aspek digitalisasi, inov
               <div key={index} className="relative max-w-sm mx-auto w-full">
                 <div className="flex justify-center mb-4 sm:mb-6">
                   <div className="w-36 h-36 sm:w-44 sm:h-44 md:w-56 md:h-56 lg:w-64 lg:h-64 rounded-full overflow-hidden">
-  <img
-    src={advisor.image}
-    alt={advisor.name}
-    className="w-full h-full object-cover"
-  />
-</div>
+                    <img
+                      src={advisor.image}
+                      alt={advisor.name}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
 
                 </div>
                 <div className="bg-[#4E6E8C] text-white rounded-2xl shadow-xl p-4 sm:p-5 -mt-6 sm:-mt-8 relative z-10">
