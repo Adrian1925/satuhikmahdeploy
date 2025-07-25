@@ -2,19 +2,19 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import Footer from "@/components/Footer";
-import { 
-  MessageCircle, 
-  Users, 
-  Target, 
-  Brain, 
-  Heart, 
+import {
+  MessageCircle,
+  Users,
+  Target,
+  Brain,
+  Heart,
   Compass,
-  Mountain, 
-  Smartphone, 
+  Mountain,
+  Smartphone,
   Briefcase,
-  MapPin, 
-  Phone, 
-  Mail, 
+  MapPin,
+  Phone,
+  Mail,
   Instagram,
   Clock,
   Lightbulb,
@@ -294,8 +294,8 @@ Sebagai advisor SatuHikmah, Eko memberi kontribusi pada aspek digitalisasi, inov
   return (
     <div className="min-h-screen">
       {/* Home Section */}
-      <section 
-        id="home" 
+      <section
+        id="home"
         className="pt-4 sm:pt-5 pb-20 sm:pb-32 lg:pb-40 px-4 sm:px-6 md:px-8 min-h-[80vh] flex items-center relative overflow-hidden"
       >
         <img
@@ -304,56 +304,60 @@ Sebagai advisor SatuHikmah, Eko memberi kontribusi pada aspek digitalisasi, inov
           className="absolute top-0 left-0 w-full h-full object-cover -z-20"
         />
         <div className="absolute inset-0 bg-gradient-to-br from-white/90 via-yellow-50/80 to-blue-50/70"></div>
-        
+
         <div className="pt-28 sm:pt-28 md:pt-32 lg:pt-40 xl:pt-42 max-w-7xl mx-auto text-center relative px-4">
           <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-4 sm:mb-6 leading-tight">
             Satu Hikmah
           </h1>
-          
+
           <h2 className="text-base xs:text-lg sm:text-xl md:text-2xl lg:text-3xl text-muted-foreground mb-4 sm:mb-6 leading-relaxed">
             Menemani Generasi Muda Menemukan Arah, Makna, dan Cahaya Hikmah
           </h2>
-          
+
           <p className="text-sm xs:text-base sm:text-lg md:text-xl text-foreground mb-6 sm:mb-8 lg:mb-10 leading-relaxed max-w-4xl mx-auto">
-            Di tengah era distraksi dan kecemasan, SatuHikmah hadir sebagai ruang pertumbuhan spiritual, 
+            Di tengah era distraksi dan kecemasan, SatuHikmah hadir sebagai ruang pertumbuhan spiritual,
             intelektual, dan sosial. Menyiapkan generasi yang tangguh, jernih dalam berpikir, dan kokoh dalam nilai.
           </p>
 
-          <div className="space-y-4 sm:space-y-6 max-w-md mx-auto">
-            <Button 
+          <div className="space-y-4 sm:space-y-6 max-w-md w-full mx-auto px-3 sm:px-6">
+            {/* Tombol WhatsApp */}
+            <Button
               onClick={handleWhatsAppJoin}
               variant="gradient"
               size="lg"
-              className="w-full h-12 sm:h-14 text-sm sm:text-base md:text-lg font-semibold rounded-lg shadow-lg hover:shadow-xl transform hover:scale-[1.02] transition-all duration-500 bg-gradient-to-r from-yellow-400 via-yellow-500 to-amber-500 text-primary-foreground border-0"
+              className="w-full min-h-[44px] sm:min-h-[52px] md:min-h-[56px] text-xs sm:text-sm md:text-base font-semibold rounded-md shadow-md hover:shadow-lg transform hover:scale-[1.01] transition-all duration-400 bg-gradient-to-r from-yellow-400 via-yellow-500 to-amber-500 text-primary-foreground border-0 flex items-center justify-center px-2"
             >
-              <MessageCircle className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
-              Gabung Komunitas WA Kami Sekarang
+              <MessageCircle className="mr-1 h-4 w-4 sm:h-5 sm:w-5" />
+              <span className="text-center leading-tight">Gabung Komunitas WA Kami</span>
             </Button>
-            
+
+            {/* Tombol Navigasi */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              <button 
+              {/* Tombol Program */}
+              <button
                 onClick={() => document.querySelector('#program')?.scrollIntoView({ behavior: 'smooth' })}
                 className="group"
               >
-                <Button 
+                <Button
                   variant="outline"
                   size="lg"
-                  className="w-full h-10 sm:h-12 text-sm sm:text-base rounded-lg border-2 border-primary/20 bg-background/50 backdrop-blur-sm hover:bg-primary hover:text-primary-foreground transition-all duration-300 group-hover:shadow-lg"
+                  className="w-full min-h-[40px] sm:min-h-[48px] text-xs sm:text-sm rounded-md border-2 border-primary/20 bg-background/50 backdrop-blur-sm hover:bg-primary hover:text-primary-foreground transition-all duration-300 group-hover:shadow-md flex items-center justify-center px-2"
                 >
                   <Target className="mr-1 h-4 w-4 sm:h-5 sm:w-5" />
                   <span className="hidden xs:inline">Lihat Program Kami</span>
                   <span className="xs:hidden">Program</span>
                 </Button>
               </button>
-              
-              <button 
+
+              {/* Tombol Tim */}
+              <button
                 onClick={() => document.querySelector('#team')?.scrollIntoView({ behavior: 'smooth' })}
                 className="group"
               >
-                <Button 
+                <Button
                   variant="outline"
                   size="lg"
-                  className="w-full h-10 sm:h-12 text-sm sm:text-base rounded-lg border-2 border-secondary/20 bg-white/70 backdrop-blur-sm hover:bg-secondary hover:text-secondary-foreground transition-all duration-300 group-hover:shadow-lg"
+                  className="w-full min-h-[40px] sm:min-h-[48px] text-xs sm:text-sm rounded-md border-2 border-secondary/20 bg-white/70 backdrop-blur-sm hover:bg-secondary hover:text-secondary-foreground transition-all duration-300 group-hover:shadow-md flex items-center justify-center px-2"
                 >
                   <Users className="mr-1 h-4 w-4 sm:h-5 sm:w-5" />
                   <span className="hidden xs:inline">Tim Founder</span>
@@ -362,11 +366,12 @@ Sebagai advisor SatuHikmah, Eko memberi kontribusi pada aspek digitalisasi, inov
               </button>
             </div>
           </div>
+
         </div>
       </section>
 
       {/* Features Section */}
-       <section className="relative z-10 py-16 px-4 sm:px-6 lg:px-8 -mt-32 sm:-mt-36 md:-mt-40 lg:-mt-44 xl:-mt-48 2xl:-mt-52">
+      <section className="relative z-10 py-16 px-4 sm:px-6 lg:px-8 -mt-32 sm:-mt-36 md:-mt-40 lg:-mt-44 xl:-mt-48 2xl:-mt-52">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
             <div className="text-center p-4 sm:p-6 bg-[#4E6E8C] text-white rounded-xl shadow-lg">
@@ -486,7 +491,7 @@ Sebagai advisor SatuHikmah, Eko memberi kontribusi pada aspek digitalisasi, inov
                 Tantangan Anak Muda Saat Ini
               </h2>
               <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-                Indonesia memiliki populasi pemuda Muslim terbesar di dunia—lebih dari 64 juta jiwa berusia 15–24 tahun (BPS, 2021). 
+                Indonesia memiliki populasi pemuda Muslim terbesar di dunia—lebih dari 64 juta jiwa berusia 15–24 tahun (BPS, 2021).
                 Namun, berbagai riset terbaru menunjukkan bahwa generasi muda Indonesia tengah menghadapi tantangan yang kompleks dan mendalam.
               </p>
             </div>
@@ -562,7 +567,7 @@ Sebagai advisor SatuHikmah, Eko memberi kontribusi pada aspek digitalisasi, inov
                 <p className="text-sm sm:text-base md:text-lg text-foreground leading-relaxed">
                   Logo SatuHikmah dirancang dengan filosofi mendalam yang mencerminkan nilai inti dari gerakan ini: ilmu, kebijaksanaan, kontemplasi, dan spiritualitas Islam.
                 </p>
-                
+
                 <div className="space-y-4">
                   <div>
                     <h4 className="text-base sm:text-lg md:text-xl font-semibold text-primary mb-2">1. Simbol Setengah Lingkaran Tertutup</h4>
@@ -575,7 +580,7 @@ Sebagai advisor SatuHikmah, Eko memberi kontribusi pada aspek digitalisasi, inov
                       <li>• <strong>Huruf "S" Abstrak:</strong> Menyimbolkan kesatuan arah, visi, dan tujuan.</li>
                     </ul>
                   </div>
-                  
+
                   <div>
                     <h4 className="text-base sm:text-lg md:text-xl font-semibold text-primary mb-2">2. Lekukan di Atas Simbol</h4>
                     <p className="text-sm sm:text-base text-foreground leading-relaxed">
@@ -857,8 +862,8 @@ Sebagai advisor SatuHikmah, Eko memberi kontribusi pada aspek digitalisasi, inov
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 mb-8 sm:mb-12">
             {contactInfo.map((contact, index) => (
-              <Card 
-                key={index} 
+              <Card
+                key={index}
                 className="cursor-pointer shadow-elegant hover:shadow-glow transition-all duration-300 transform hover:-translate-y-1"
                 onClick={contact.action}
               >
@@ -904,10 +909,10 @@ Sebagai advisor SatuHikmah, Eko memberi kontribusi pada aspek digitalisasi, inov
                 Siap Bergabung dengan Kami?
               </h3>
               <p className="text-sm sm:text-base md:text-lg text-foreground mb-4 sm:mb-6 max-w-2xl mx-auto">
-                Jangan biarkan kesempatan untuk bertumbuh bersama komunitas yang tepat terlewat begitu saja. 
+                Jangan biarkan kesempatan untuk bertumbuh bersama komunitas yang tepat terlewat begitu saja.
                 Mari mulai perjalanan menuju hikmah dan makna hidup yang lebih dalam.
               </p>
-              
+
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
                 <Button
                   onClick={() => window.open("https://chat.whatsapp.com/GBirJ9uEJXEEzZNBSPzhrd", "_blank")}
@@ -918,7 +923,7 @@ Sebagai advisor SatuHikmah, Eko memberi kontribusi pada aspek digitalisasi, inov
                   <Phone className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
                   Gabung WhatsApp Group
                 </Button>
-                
+
                 <Button
                   onClick={() => window.open("https://instagram.com/satuhikmah", "_blank")}
                   variant="outline"
@@ -937,7 +942,7 @@ Sebagai advisor SatuHikmah, Eko memberi kontribusi pada aspek digitalisasi, inov
                   Punya Pertanyaan?
                 </h4>
                 <p className="text-sm sm:text-base text-foreground mb-3 sm:mb-4">
-                  Jangan ragu untuk menghubungi kami melalui platform yang paling nyaman untuk Anda. 
+                  Jangan ragu untuk menghubungi kami melalui platform yang paling nyaman untuk Anda.
                   Tim kami siap membantu menjawab pertanyaan dan memberikan informasi lebih lanjut tentang program-program SatuHikmah.
                 </p>
                 <div className="flex flex-wrap justify-center gap-2 sm:gap-3">
