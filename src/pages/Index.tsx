@@ -34,7 +34,7 @@ const Index = () => {
     {
       name: "Mirza Rahmat Hakim",
       role: "Co-Founder SatuHikmah | Aktivis Pemuda | Mahasiswa Teknik K3 PPNS",
-      image: "../lovable-uploads/founder2.svg",
+      image: "../lovable-uploads/f2.svg",
       description: `Berangkat dari pesantren dan pendidikan unggulan di MAN Insan Cendekia Sambas, Mirza tumbuh sebagai pemuda yang aktif, reflektif, dan haus akan perubahan. Saat ini ia menjalani studi di bidang Keselamatan dan Kesehatan Kerja (K3) di Politeknik Perkapalan Negeri Surabaya (PPNS), sambil terus memperluas kiprahnya di berbagai lini kepemimpinan dan gerakan kemahasiswaan nasional.
 
 Mirza pernah memegang amanah strategis sebagai:
@@ -49,7 +49,7 @@ Sebagai Co-Founder SatuHikmah, Mirza membawa semangat kepemudaan, ketangguhan la
     {
       name: "Muhammad Fadhil Al-Faruqhi",
       role: "Co-Founder SatuHikmah | Mahasiswa Teknik Industri ITS",
-      image: "../lovable-uploads/founder1.svg",
+      image: "../lovable-uploads/f1.svg",
       description: `Fadhil adalah sosok pembelajar yang tumbuh di tengah dinamika kampus dan semangat perubahan. Saat ini menempuh studi di Teknik Industri ITS, ia aktif dalam berbagai aktivitas kemahasiswaan, kebijakan kampus, literasi media, dan kepemimpinan organisasi Islam.
 
 Di tengah kesibukannya sebagai Editor ITS Online, Ketua Masyarakat Studi Islam Ulul Ilmi, dan Direktur Kebijakan Publik BEM ITS, Fadhil tetap konsisten membawa semangat literasi, keadilan sosial, dan spiritualitas dalam setiap ruang yang ia jalani.
@@ -325,7 +325,8 @@ Sebagai advisor SatuHikmah, Eko memberi kontribusi pada aspek digitalisasi, inov
               onClick={handleWhatsAppJoin}
               variant="gradient"
               size="lg"
-              className="w-full min-h-[44px] sm:min-h-[52px] md:min-h-[56px] text-xs sm:text-sm md:text-base font-semibold rounded-md shadow-md hover:shadow-lg transform hover:scale-[1.01] transition-all duration-400 bg-gradient-to-r from-yellow-400 via-yellow-500 to-amber-500 text-primary-foreground border-0 flex items-center justify-center px-2"
+              className="w-full min-h-[44px] sm:min-h-[52px] md:min-h-[56px] text-xs sm:text-sm md:text-base font-semibold rounded-md shadow-md hover:shadow-lg transform hover:scale-[1.01] transition-all duration-400 bg-gradient-to-r from-yellow-400 via-yellow-500 to-amber-500 text-primary-foreground border-0 flex items-center justify-center px-2 relative z-50"
+              style={{ touchAction: 'manipulation', pointerEvents: 'auto' }}
             >
               <MessageCircle className="mr-1 h-4 w-4 sm:h-5 sm:w-5" />
               <span className="text-center leading-tight">Gabung Komunitas WA Kami</span>
@@ -336,37 +337,71 @@ Sebagai advisor SatuHikmah, Eko memberi kontribusi pada aspek digitalisasi, inov
               {/* Tombol Program */}
               <button
                 onClick={() => document.querySelector('#program')?.scrollIntoView({ behavior: 'smooth' })}
-                className="group"
+                className="group relative z-50 w-full"
+                style={{ touchAction: 'manipulation', pointerEvents: 'auto' }}
+                type="button"
               >
                 <Button
                   variant="outline"
                   size="lg"
-                  className="w-full min-h-[40px] sm:min-h-[48px] text-xs sm:text-sm rounded-md border-2 border-primary/20 bg-background/50 backdrop-blur-sm hover:bg-primary hover:text-primary-foreground transition-all duration-300 group-hover:shadow-md flex items-center justify-center px-2"
+                  className="w-full min-h-[44px] sm:min-h-[48px] text-xs sm:text-sm rounded-md border-2 border-primary/20 bg-background/50 backdrop-blur-sm hover:bg-primary hover:text-primary-foreground transition-all duration-300 group-hover:shadow-md flex items-center justify-center px-2 cursor-pointer"
+                  asChild
                 >
-                  <Target className="mr-1 h-4 w-4 sm:h-5 sm:w-5" />
-                  <span className="hidden xs:inline">Lihat Program Kami</span>
-                  <span className="xs:hidden">Program</span>
+                  <span className="flex items-center justify-center w-full h-full">
+                    <Target className="mr-1 h-4 w-4 sm:h-5 sm:w-5" />
+                    <span className="hidden xs:inline">Lihat Program Kami</span>
+                    <span className="xs:hidden">Program</span>
+                  </span>
                 </Button>
               </button>
 
-              {/* Tombol Tim */}
+              {/* Tombol Tim - DIPERBAIKI */}
               <button
-                onClick={() => document.querySelector('#team')?.scrollIntoView({ behavior: 'smooth' })}
-                className="group"
+                onClick={() => {
+                  console.log('Tim button clicked!'); // Debug log
+                  const teamElement = document.querySelector('#team');
+                  if (teamElement) {
+                    teamElement.scrollIntoView({ behavior: 'smooth' });
+                  } else {
+                    console.warn('Team element not found');
+                  }
+                }}
+                className="group relative z-[999] w-full cursor-pointer"
+                style={{
+                  touchAction: 'manipulation',
+                  pointerEvents: 'auto',
+                  userSelect: 'none',
+                  WebkitTapHighlightColor: 'transparent'
+                }}
+                type="button"
+                onTouchStart={(e) => {
+                  e.preventDefault();
+                  console.log('Touch start on team button');
+                }}
+                onTouchEnd={(e) => {
+                  e.preventDefault();
+                  console.log('Touch end on team button');
+                  const teamElement = document.querySelector('#team');
+                  if (teamElement) {
+                    teamElement.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
               >
                 <Button
                   variant="outline"
                   size="lg"
-                  className="w-full min-h-[40px] sm:min-h-[48px] text-xs sm:text-sm rounded-md border-2 border-secondary/20 bg-white/70 backdrop-blur-sm hover:bg-secondary hover:text-secondary-foreground transition-all duration-300 group-hover:shadow-md flex items-center justify-center px-2"
+                  className="w-full min-h-[44px] sm:min-h-[48px] text-xs sm:text-sm rounded-md border-2 border-secondary/20 bg-white/70 backdrop-blur-sm hover:bg-secondary hover:text-secondary-foreground transition-all duration-300 group-hover:shadow-md flex items-center justify-center px-2 cursor-pointer pointer-events-none"
+                  asChild
                 >
-                  <Users className="mr-1 h-4 w-4 sm:h-5 sm:w-5" />
-                  <span className="hidden xs:inline">Tim Founder</span>
-                  <span className="xs:hidden">Tim</span>
+                  <span className="flex items-center justify-center w-full h-full pointer-events-none">
+                    <Users className="mr-1 h-4 w-4 sm:h-5 sm:w-5 pointer-events-none" />
+                    <span className="hidden xs:inline pointer-events-none">Tim Founder</span>
+                    <span className="xs:hidden pointer-events-none">Tim</span>
+                  </span>
                 </Button>
               </button>
             </div>
           </div>
-
         </div>
       </section>
 
@@ -426,8 +461,9 @@ Sebagai advisor SatuHikmah, Eko memberi kontribusi pada aspek digitalisasi, inov
                   <img
                     src={member.image}
                     alt={member.name}
-                    className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 object-contain"
+                    className="w-40 h-40 sm:w-52 sm:h-52 md:w-64 md:h-64 lg:w-72 lg:h-72 xl:w-80 xl:h-80 object-contain"
                   />
+
                 </div>
                 <div className="bg-[#4E6E8C] text-white rounded-2xl shadow-xl p-4 sm:p-5 md:p-6 -mt-8 sm:-mt-10 md:-mt-12 relative z-10">
                   <div className="text-center pt-6 sm:pt-8 md:pt-10">
@@ -457,13 +493,14 @@ Sebagai advisor SatuHikmah, Eko memberi kontribusi pada aspek digitalisasi, inov
             {advisors.map((advisor, index) => (
               <div key={index} className="relative max-w-sm mx-auto w-full">
                 <div className="flex justify-center mb-4 sm:mb-6">
-                  <div className="w-28 h-28 sm:w-32 sm:h-32 md:w-36 md:h-36 lg:w-40 lg:h-40 rounded-full overflow-hidden">
-                    <img
-                      src={advisor.image}
-                      alt={advisor.name}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
+                  <div className="w-36 h-36 sm:w-44 sm:h-44 md:w-56 md:h-56 lg:w-64 lg:h-64 rounded-full overflow-hidden">
+  <img
+    src={advisor.image}
+    alt={advisor.name}
+    className="w-full h-full object-cover"
+  />
+</div>
+
                 </div>
                 <div className="bg-[#4E6E8C] text-white rounded-2xl shadow-xl p-4 sm:p-5 -mt-6 sm:-mt-8 relative z-10">
                   <div className="text-center pt-4 sm:pt-6">
