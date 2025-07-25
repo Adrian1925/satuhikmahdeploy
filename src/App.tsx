@@ -5,11 +5,11 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Index from "./pages/Index";
-import Team from "./pages/Team";
-import About from "./pages/About";
-import Program from "./pages/Program";
-import Contact from "./pages/Contact";
-import NotFound from "./pages/NotFound";
+// import Team from "./pages/Team";
+// import About from "./pages/About";
+// import Program from "./pages/Program";
+// import Contact from "./pages/Contact";
+// import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
@@ -27,7 +27,7 @@ const App = () => (
           <Route path="/about" element={<Index />} />
           <Route path="/program" element={<Index />} />
           <Route path="/contact" element={<Index />} />
-          <Route path="*" element={<NotFound />} />
+          {/* <Route path="*" element={<NotFound />} /> */}
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
