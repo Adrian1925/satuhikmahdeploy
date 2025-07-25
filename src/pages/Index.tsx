@@ -296,7 +296,7 @@ Sebagai advisor SatuHikmah, Eko memberi kontribusi pada aspek digitalisasi, inov
       {/* Home Section */}
       <section 
         id="home" 
-        className="pt-3 sm:pt-5 pb-20 sm:pb-32 lg:pb-40 px-4 sm:px-6 md:px-8 min-h-[80vh] flex items-center relative overflow-hidden"
+        className="pt-4 sm:pt-5 pb-20 sm:pb-32 lg:pb-40 px-4 sm:px-6 md:px-8 min-h-[80vh] flex items-center relative overflow-hidden"
       >
         <img
           src="/lovable-uploads/background.jpg"
@@ -305,7 +305,7 @@ Sebagai advisor SatuHikmah, Eko memberi kontribusi pada aspek digitalisasi, inov
         />
         <div className="absolute inset-0 bg-gradient-to-br from-white/90 via-yellow-50/80 to-blue-50/70"></div>
         
-        <div className="max-w-7xl mx-auto text-center relative px-4">
+        <div className="pt-28 sm:pt-28 md:pt-32 lg:pt-40 xl:pt-42 max-w-7xl mx-auto text-center relative px-4">
           <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-4 sm:mb-6 leading-tight">
             Satu Hikmah
           </h1>
