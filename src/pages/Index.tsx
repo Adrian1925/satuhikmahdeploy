@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -23,8 +24,208 @@ import {
   HeartHandshake,
   User
 } from "lucide-react";
+import { useEffect } from "react";
 
 const Index = () => {
+  useEffect(() => {
+    // Set document title
+    document.title = "SatuHikmah - Komunitas Pengembangan Pemuda Muslim Indonesia | Program Spiritual & Karir";
+    
+    // Create and set meta tags
+    const setMetaTag = (name, content, property = false) => {
+      let meta = document.querySelector(property ? `meta[property="${name}"]` : `meta[name="${name}"]`);
+      if (!meta) {
+        meta = document.createElement('meta');
+        if (property) {
+          meta.setAttribute('property', name);
+        } else {
+          meta.setAttribute('name', name);
+        }
+        document.head.appendChild(meta);
+      }
+      meta.setAttribute('content', content);
+    };
+
+    // Primary Meta Tags
+    setMetaTag('description', 'Komunitas SatuHikmah mengiringi pemuda Muslim usia 18-24 tahun menemukan jati diri, mengembangkan spiritual, dan mempersiapkan karir halal. Bergabunglah dengan program Kembara Hikmah, Digital Mindfulness, dan Youth Career Workshop.');
+    setMetaTag('keywords', 'komunitas muslim, pemuda islam, pengembangan diri islam, spiritual growth, karir halal, digital detox islam, kembara hikmah, surabaya, komunitas muslim surabaya, pengembangan pemuda muslim, program spiritual islam');
+    setMetaTag('robots', 'index, follow');
+    setMetaTag('language', 'Indonesian');
+    setMetaTag('author', 'SatuHikmah');
+    setMetaTag('viewport', 'width=device-width, initial-scale=1.0');
+
+    // Open Graph Tags
+    setMetaTag('og:type', 'website', true);
+    setMetaTag('og:url', 'https://satuhikmah.id/', true);
+    setMetaTag('og:title', 'SatuHikmah - Komunitas Pengembangan Pemuda Muslim Indonesia', true);
+    setMetaTag('og:description', 'Komunitas SatuHikmah mengiringi pemuda Muslim usia 18-24 tahun menemukan jati diri, mengembangkan spiritual, dan mempersiapkan karir halal.', true);
+    setMetaTag('og:image', 'https://satuhikmah.id/og-image.jpg', true);
+    setMetaTag('og:site_name', 'SatuHikmah', true);
+    setMetaTag('og:locale', 'id_ID', true);
+
+    // Twitter Tags
+    setMetaTag('twitter:card', 'summary_large_image', true);
+    setMetaTag('twitter:url', 'https://satuhikmah.id/', true);
+    setMetaTag('twitter:title', 'SatuHikmah - Komunitas Pengembangan Pemuda Muslim Indonesia', true);
+    setMetaTag('twitter:description', 'Komunitas SatuHikmah mengiringi pemuda Muslim usia 18-24 tahun menemukan jati diri, mengembangkan spiritual, dan mempersiapkan karir halal.', true);
+    setMetaTag('twitter:image', 'https://satuhikmah.id/og-image.jpg', true);
+
+    // Canonical URL
+    let canonical = document.querySelector('link[rel="canonical"]');
+    if (!canonical) {
+      canonical = document.createElement('link');
+      canonical.setAttribute('rel', 'canonical');
+      document.head.appendChild(canonical);
+    }
+    canonical.setAttribute('href', 'https://satuhikmah.id/');
+
+    // Schema Markup for Organization
+    const schemaScript = document.createElement('script');
+    schemaScript.type = 'application/ld+json';
+    schemaScript.textContent = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "SatuHikmah",
+      "alternateName": ["Satu Hikmah", "Komunitas SatuHikmah"],
+      "url": "https://satuhikmah.id",
+      "logo": "https://satuhikmah.id/logo.png",
+      "description": "Komunitas pengembangan pemuda Muslim Indonesia yang fokus pada spiritual growth, intellectual development, dan social impact untuk usia 18-24 tahun",
+      "foundingDate": "2024",
+      "keywords": ["komunitas muslim", "pemuda islam", "pengembangan diri", "spiritual growth", "karir halal", "surabaya"],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Jl.Sukolilo Regency Blok E-46",
+        "addressLocality": "Sukolilo",
+        "addressRegion": "Surabaya",
+        "addressCountry": "ID"
+      },
+      "contactPoint": [{
+        "@type": "ContactPoint",
+        "telephone": "+62-895-2816-4600",
+        "contactType": "customer service",
+        "availableLanguage": "Indonesian"
+      }],
+      "sameAs": [
+        "https://instagram.com/satuhikmah",
+        "https://chat.whatsapp.com/GBirJ9uEJXEEzZNBSPzhrd"
+      ],
+      "founder": [
+        {
+          "@type": "Person",
+          "name": "Mirza Rahmat Hakim",
+          "jobTitle": "Co-Founder SatuHikmah"
+        },
+        {
+          "@type": "Person", 
+          "name": "Muhammad Fadhil Al-Faruqhi",
+          "jobTitle": "Co-Founder SatuHikmah"
+        }
+      ],
+      "offers": [
+        {
+          "@type": "Service",
+          "name": "Kembara Hikmah - Youth Identity Camp",
+          "description": "Camp 2 hari 1 malam untuk menemukan jati diri sebagai Muslim"
+        },
+        {
+          "@type": "Service",
+          "name": "Digital Mindfulness Series",
+          "description": "Seri sesi untuk mengenali dampak dunia digital terhadap hati dan pikiran"
+        },
+        {
+          "@type": "Service",
+          "name": "Youth Purpose & Career Workshop",
+          "description": "Program membantu pemuda menata ulang arah hidup dan karier dengan fondasi nilai Islam"
+        }
+      ]
+    });
+    document.head.appendChild(schemaScript);
+
+    // Additional Schema for Local Business
+    const localBusinessSchema = document.createElement('script');
+    localBusinessSchema.type = 'application/ld+json';
+    localBusinessSchema.textContent = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "SatuHikmah",
+      "image": "https://satuhikmah.id/logo.png",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Jl.Sukolilo Regency Blok E-46",
+        "addressLocality": "Sukolilo",
+        "addressRegion": "Surabaya",
+        "postalCode": "60111",
+        "addressCountry": "ID"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -7.2975,
+        "longitude": 112.7969
+      },
+      "telephone": "+62-895-2816-4600",
+      "email": "mirzasp841@gmail.com",
+      "url": "https://satuhikmah.id",
+      "priceRange": "Gratis - Rp 500.000",
+      "openingHours": "Mo-Su 08:00-20:00",
+      "servesCuisine": "Community Development",
+      "areaServed": "Indonesia"
+    });
+    document.head.appendChild(localBusinessSchema);
+
+    // FAQ Schema
+    const faqSchema = document.createElement('script');
+    faqSchema.type = 'application/ld+json';
+    faqSchema.textContent = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Apa itu SatuHikmah?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "SatuHikmah adalah komunitas pengembangan pemuda Muslim Indonesia yang fokus pada spiritual growth, intellectual development, dan social impact untuk usia 18-24 tahun. Kami menyediakan ruang bertumbuh yang aman dengan program-program berbasis nilai Islam."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Program apa saja yang tersedia di SatuHikmah?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Kami memiliki program Kembara Hikmah (Youth Identity Camp), Digital Mindfulness Series, Youth Purpose & Career Workshop, Hikmah Diri (Self Discovery), Hikmah Jiwa (Mental Health Coaching), dan Sakinah Berhikmah (Sekolah Pra-Nikah)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Dimana lokasi SatuHikmah?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "SatuHikmah berlokasi di Jl.Sukolilo Regency Blok E-46, Sukolilo, Surabaya. Namun program kami juga dapat diakses secara online untuk peserta dari seluruh Indonesia."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Bagaimana cara bergabung dengan SatuHikmah?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Anda dapat bergabung melalui WhatsApp Group kami di https://chat.whatsapp.com/GBirJ9uEJXEEzZNBSPzhrd atau menghubungi kami di nomor 0895-2816-4600."
+          }
+        }
+      ]
+    });
+    document.head.appendChild(faqSchema);
+
+    return () => {
+      // Cleanup function to remove added elements if needed
+      const scripts = document.querySelectorAll('script[type="application/ld+json"]');
+      scripts.forEach(script => {
+        if (script.textContent.includes('SatuHikmah')) {
+          script.remove();
+        }
+      });
+    };
+  }, []);
+
   const handleWhatsAppJoin = () => {
     window.open("https://chat.whatsapp.com/GBirJ9uEJXEEzZNBSPzhrd", "_blank");
   };
@@ -34,7 +235,7 @@ const Index = () => {
     {
       name: "Mirza Rahmat Hakim",
       role: "Co-Founder SatuHikmah | Aktivis Pemuda | Mahasiswa Teknik K3 PPNS",
-      image: "../lovable-uploads/f1.svg",
+      image: "https://ik.imagekit.io/rtcameiff/f1.svg?updatedAt=1754017168714",
       description: `Berangkat dari pesantren dan pendidikan unggulan di MAN Insan Cendekia Sambas, Mirza tumbuh sebagai pemuda yang aktif, reflektif, dan haus akan perubahan. Saat ini ia menjalani studi di bidang Keselamatan dan Kesehatan Kerja (K3) di Politeknik Perkapalan Negeri Surabaya (PPNS), sambil terus memperluas kiprahnya di berbagai lini kepemimpinan dan gerakan kemahasiswaan nasional.
 
 Mirza pernah memegang amanah strategis sebagai:
@@ -49,7 +250,7 @@ Sebagai Co-Founder SatuHikmah, Mirza membawa semangat kepemudaan, ketangguhan la
     {
       name: "Muhammad Fadhil Al-Faruqhi",
       role: "Co-Founder SatuHikmah | Mahasiswa Teknik Industri ITS",
-      image: "../lovable-uploads/f2.svg",
+      image: "https://ik.imagekit.io/rtcameiff/f2.svg?updatedAt=1754017174408",
       description: `Fadhil adalah sosok pembelajar yang tumbuh di tengah dinamika kampus dan semangat perubahan. Saat ini menempuh studi di Teknik Industri ITS, ia aktif dalam berbagai aktivitas kemahasiswaan, kebijakan kampus, literasi media, dan kepemimpinan organisasi Islam.
 
 Di tengah kesibukannya sebagai Editor ITS Online, Ketua Masyarakat Studi Islam Ulul Ilmi, dan Direktur Kebijakan Publik BEM ITS, Fadhil tetap konsisten membawa semangat literasi, keadilan sosial, dan spiritualitas dalam setiap ruang yang ia jalani.
@@ -63,7 +264,7 @@ Fadhil dikenal sebagai pemuda dengan ketajaman analisis, kepekaan sosial, dan se
     {
       name: "Ario Muhammad, PhD",
       role: "Advisor SatuHikmah | Founder Edufic.id | Peneliti, Penulis, dan Mentor Pemuda",
-      image: "/lovable-uploads/Advisor1.png",
+      image: "https://ik.imagekit.io/rtcameiff/Advisor1.png?updatedAt=1754017163367",
       description: `Lahir dan besar di pelosok Halmahera, Maluku Utara, Ario Muhammad tumbuh dalam keterbatasan—baik ekonomi, akses pendidikan, maupun luka keluarga. Namun dari ruang-ruang sunyi itu, ia menapaki jalan panjang hingga meraih gelar Ph.D. dari Inggris, setelah menyelesaikan studi Master di Taiwan, seluruhnya dengan beasiswa penuh.
 
 Ario dikenal sebagai founder Edufic.id, sebuah platform edukasi kreatif yang telah menjangkau ratusan ribu pelajar dan orang tua, dengan lebih dari 129.000 pengikut di Instagram. Ia juga telah menulis 14 buku, membimbing ratusan mahasiswa, dan aktif berbicara di berbagai forum nasional dan internasional, terutama dalam isu-isu kepemudaan, pendidikan, trauma pengasuhan, dan spiritualitas.
@@ -73,7 +274,7 @@ Sebagai advisor SatuHikmah, Ario membawa pendekatan yang utuh: memadukan ilmu, e
     {
       name: "Muhammad Yorga Permana, PhD",
       role: "Advisor SatuHikmah | Peneliti, Dosen, dan Pengamat Sosial | Alumni LSE & Universiteit van Amsterdam",
-      image: "/lovable-uploads/Advisor2.png",
+      image: "https://ik.imagekit.io/rtcameiff/Advisor2.png?updatedAt=1754017163318",
       description: `Dr. Muhammad Yorga Permana adalah seorang intelektual muda yang aktif dalam kajian ilmu sosial, politik, dan perkembangan masyarakat Muslim kontemporer. Ia menyelesaikan pendidikan doktoralnya di London School of Economics (LSE) dan sebelumnya meraih gelar Master dari Universiteit van Amsterdam, Belanda.
 
 Fokus keilmuannya mencakup isu-isu keadilan sosial, civil society, Islam dan kewargaan, serta dinamika kelas menengah Muslim di Indonesia. Dengan kombinasi ketajaman akademik dan kepekaan sosial, Yorga kerap menjadi narasumber dalam forum kajian, seminar, dan media yang membahas isu-isu transformasi sosial dan generasi muda Muslim.
@@ -83,7 +284,7 @@ Sebagai advisor SatuHikmah, Yorga memberi kontribusi penting dalam merumuskan ar
     {
       name: "Eko Kurniawan",
       role: "Advisor SatuHikmah | Praktisi Teknologi dan Inovasi Sosial | CTO",
-      image: "/lovable-uploads/Advisor3.png",
+      image: "https://ik.imagekit.io/rtcameiff/Advisor3.png?updatedAt=1754017163277",
       description: `Eko Kurniawan adalah seorang praktisi teknologi dengan pengalaman lebih dari 15 tahun di berbagai perusahaan teknologi global dan startup lintas negara. Ia pernah berkontribusi di posisi strategis di berbagai perusahaan internasional di bidang cloud infrastructure, data engineering, dan product development, termasuk pengalaman bekerja lintas budaya di Asia Tenggara, Eropa, dan Amerika.
 
 Sebagai founder dan CTO, Eko dikenal tidak hanya andal secara teknis, tetapi juga memiliki visi kuat dalam membangun tim teknologi yang agile, kolaboratif, dan berdampak. Pengalaman internasionalnya menjadikannya mentor yang berpandangan luas namun tetap membumi, terutama dalam membimbing generasi muda untuk siap menghadapi tantangan global.
@@ -299,7 +500,7 @@ Sebagai advisor SatuHikmah, Eko memberi kontribusi pada aspek digitalisasi, inov
         className="pt-4 sm:pt-5 pb-20 sm:pb-32 lg:pb-40 px-4 sm:px-6 md:px-8 min-h-[80vh] flex items-center relative overflow-hidden"
       >
         <img
-          src="/lovable-uploads/background.jpg"
+          src="https://ik.imagekit.io/rtcameiff/background.jpg?updatedAt=1754017168099"
           alt="background"
           className="absolute top-0 left-0 w-full h-full object-cover -z-20"
         />
